@@ -26,4 +26,11 @@
     <Using Include="Xunit" />
   </ItemGroup>
 
+  <!-- Coverage settings -->
+  <PropertyGroup>
+    <CollectCoverage>true</CollectCoverage>
+    <CoverletOutput>TestResults/</CoverletOutput>
+    <CoverletOutputFormat>cobertura</CoverletOutputFormat>
+  </PropertyGroup>
+
 </Project>
