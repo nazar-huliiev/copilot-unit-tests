@@ -3,11 +3,15 @@ description: This file provides guidelines for writing clean, maintainable, and 
 applyTo: '**/*.cs'
 ---
 
+[a relative link](some-weird.instructions.md)
+
 **Requirements:**
 - Write clear, self-documenting code
 - Keep abstractions simple and focused
 - Minimize dependencies and coupling
 - Use modern C# features appropriately
+
+[this subtext](some-weird.instructions.md)
 
 ## General Instructions
 ### Formatting
