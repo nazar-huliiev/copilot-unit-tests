@@ -36,6 +36,21 @@ dotnet test --collect:"XPlat Code Coverage"
 - Suggest writing additional unit tests to improve coverage for methods below the threshold.
 - Do not convert test results to other formats (e.g., don’t force LCOV, HTML).
 - When suggesting unit tests, focus on untested or partially tested methods and edge cases.
+- Show results **per method** (not just per class).
+- Display them in a **table format** with the following columns:
+   - Class/Method
+   - Coverage %
+   - Covered Lines
+   - Total Lines
+- If a method’s coverage is less than **70%**, highlight it (e.g., with ❌ or bold).
+- Use Markdown tables for display.
+
+## Example Output
+| Method              | Coverage | Covered | Total |
+|---------------------|----------|---------|-------|
+| MyClass.DoWork      | 85% ✅   | 17      | 20    |
+| MyClass.Calculate   | 60% ❌   | 6       | 10    |
+| MyOtherClass.Run    | 100% ✅  | 12      | 12    |
 
 ## Naming
 ### Avoid using not descriptive and misleading names and constants
