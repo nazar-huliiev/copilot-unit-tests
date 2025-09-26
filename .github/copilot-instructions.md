@@ -19,6 +19,22 @@ applyTo: '**/*.cs'
 - Use `nameof` instead of string literals when referring to member names.
 - To ensure a clear separation between different parts of a class or object, use exactly one empty line to separate methods, properties, constructors, or other class-level members.
 
+### Code Coverage Analysis
+- Always use coverlet.collector when analyzing code coverage in unit tests.
+- Run coverage with:
+```console
+dotnet test --collect:"XPlat Code Coverage"
+```
+- Parse the generated coverage.cobertura.xml or coverage.json file.
+- Identify methods with less than 70% coverage (use method coverage as the primary metric).
+- Provide a simple report that lists:
+  - Class name
+  - Method name
+  - Coverage percentage
+- Suggest writing additional unit tests to improve coverage for methods below the threshold.
+- Do not convert test results to other formats (e.g., don’t force LCOV, HTML).
+- When suggesting unit tests, focus on untested or partially tested methods and edge cases.
+
 ## Naming
 ### Avoid using not descriptive and misleading names and constants
 It is important to ensure that the once-written source code can be read like a book. It should be understandable and natural. Descriptive names make the code readable and searchable. A good name reveals the intentions of the developer who wrote the code.
