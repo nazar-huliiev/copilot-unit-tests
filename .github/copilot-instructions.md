@@ -11,8 +11,6 @@ applyTo: '**/*.cs'
 - Minimize dependencies and coupling
 - Use modern C# features appropriately
 
-[this subtext](some-weird.instructions.md)
-
 ## General Instructions
 ### Formatting
 - Use 4 spaces for indentation; avoid tabs.
